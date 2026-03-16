@@ -6,7 +6,6 @@ module tb_booth_multiplier;
     reg        CLK, AR;
     wire [7:0] Product;
     
-    // THE FIX: Intermediate signed net for the monitor
     wire signed [7:0] signed_product;
     assign signed_product = Product;
 
@@ -62,7 +61,6 @@ module tb_booth_multiplier;
 
     // --- Monitor / Output ---
     initial begin
-        // Print header for readability
         $display("---------------------------------------------------------------------------------");
         $display("  Time |  M (Bin) | Acc (Bin) | Q (Bin) | Q-1 | Cnt | Prod (Bin) | Prod (Dec)");
         $display("---------------------------------------------------------------------------------");
